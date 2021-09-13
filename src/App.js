@@ -18,7 +18,7 @@ function App() {
     {pic: image2, site: "Old City Hall", desc: "The Clock Tower"},
     {pic: image3, site: "The CN Tower", desc: "One of the Worlds Tallest Towers"},
     {pic: image4, site: "Royal Ontario Museum", desc: "Most Visited Museum in Canada"},
-    {pic: image5, site: "The Rogeres Center", desc: "Toronto's Iconic Skydome"},
+    {pic: image5, site: "The Rogers Center", desc: "Toronto's Iconic Skydome"},
     {pic: image6, site: "Toronto City Hall", desc: "A Brutalist Architecture Masterpiece"},  
   ];
 
