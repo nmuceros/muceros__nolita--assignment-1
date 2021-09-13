@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+/*To use: font-family: 'Open Sans', sans-serif; */
+
+html, body {
+  background-size: cover;
+  height: 100%;
+  background-color: #d5d5d5;  
+}
+
+#overlay {
+  background: rgba(0, 0, 0, 0.8);
+  z-Index: 2;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+
+.modal-image-container {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 85%;
+  width: 85%; 
+}
+
+#overlay img {
+  height: 100%;
+  width: 100%;
+  object-position: 50% 50%;
+
+  /* Below are the options how the image will be rendered in modal view */
+  /* Not sure what is the requirement for this assignment but I chose contain for now to show the entire image in modal */
+  /* object-fit: fill; */
+  /* object-fit: cover; */
+  object-fit: contain;
+  transition: transform .3s ease;
+}
+
+
+#overlay img:hover {
+  transform: translate(-.35rem) scale(1.05);
+}
+
+
+p {
+  text-align: left;
+}
+
+.p-historical {
+  color: grey;
+  font-size: calc(12px + 2vmin);
+}
+
+.grid {
+  column-count: 3;
+  padding: 0px 50px 0px 50px;
+  background-color: #d5d5d5;  
+}
+
+.galleryItem-container {
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin-bottom: 20px; 
+  background-color: white;
+}
+
+.galleryItem-container img {
+  width: 100%;
+  height: auto;
+  display: block; 
+}
+
+.imgTxt-container {
+  position: absolute;
+  height: auto;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  transition: all .5s ease;
+  opacity: 0;
+  background-image: linear-gradient(to bottom right, rgba(255, 255, 255, .8) 0%, rgba(255, 255, 255,.8) 49%, rgba(0, 0, 0, 0) 49%, rgba(0, 0, 0, 0) 100%);
+}
+
+
+.galleryItem-container:hover .imgTxt-container {
+  opacity: 1;
+  z-index: 0;
+}
+
+ .siteTxt-container, .siteDescTxt-container {
+  opacity: 1;
+  position: absolute;  
+  width: 56%;
+  left: 16px;
+  top: 30px;
+  text-align: left;  
+  font: 16vw;
+  }
+
+.siteTxt-container {
+  font-weight: bold;
+}
+
+ .siteDescTxt-container{
+  top: 60px;
+}
+ 
+.modal-closeLink {
+  position: absolute;
+  margin-top: 20px;
+  right: 50px;
+  color: white;
+  font-size: 14px;
+}
+
+.modal-close {
+  position: absolute;
+  right: 3%;
+  margin-top: 20px;
+  color: white;
+  font-size: 14px;
+}
+
+
+.footer {
+  height: 100px;
+  background-color: #d5d5d5;  
+  text-align: center;
+}
+
+.social-container {
+  /* Note: For Instagram, the Toronto official Instagram site requires login, I just linked it to public Toronto Instagram feed*/
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: #d5d5d5;  
+  margin-left: 50px;
+}
+
+.img-social {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  float: left;
+  width: 1.5%;
+  height: auto;
+  color: white;
+  margin-left: 2%;
+  opacity: 1;
+}
+
+.img-social:hover {
+  opacity: .5;
+  transform: scale(1.5);
+  
+}
+
+.App {
+  /* text-align: center; */
+}
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+
+@media only screen and (max-width: 902px) {
+  .App-header {
+    width: 100%;
+  }
+
+  p {
+    font-size: calc(7px + 2vmin);
+  }
+  
+  .p-historical {
+    
+    font-size: calc(6px + 2vmin);
+  }
+
+  .siteTxt-container {    
+    position: relative;
+    left: 4px;
+    top: 4px;
+    text-align: left;   
+    font-size: 1vw
+  }
+
+ .siteDescTxt-container {    
+  position: relative;
+  left: 4px;
+  top: 8px;
+  text-align: left;   
+  font-size: 1vw;
+  word-wrap: break-word;
+  }
+
+  .modal-closeLink {
+    position: absolute;
+    margin-top: 10px;
+    right: 25px;
+    color: white;
+    font-size: 9px;
+  }
+  
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 120s linear;
+  }
+}
+
+.App-header {
+  background-color: #d5d5d5;
+  margin: auto;
+  padding: 30px 50px 5px 50px;
+  font-size: calc(14px + 2vmin);
+  color: black;
+  font-family: 'Open Sans', sans-serif;  
+}
+
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
